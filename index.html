@@ -600,12 +600,12 @@
                     </div>
                     
                     <div class="chart-container">
-                        <div class="chart-title">Velocidad (km/s)</div>
+                        <div class="chart-title">Densidad de protones (partículas/cm³)</div>
                         <canvas id="speedChart"></canvas>
                     </div>
                     
                     <div class="chart-container">
-                        <div class="chart-title">Densidad de protones (partículas/cm³)</div>
+                        <div class="chart-title">Velocidad (km/s)</div>
                         <canvas id="densityChart"></canvas>
                     </div>
                     
@@ -1144,7 +1144,7 @@
                 data: {
                     labels: plasmaTimeLabels,
                     datasets: [{
-                        label: 'Hitrost',
+                        label: 'Densidad',
                         data: speedData,
                         borderColor: '#9c27b0',
                         backgroundColor: 'rgba(156, 39, 176, 0.1)',
@@ -1154,7 +1154,7 @@
                         fill: true
                     }]
                 },
-                options: getChartOptions('km/s')
+                options: getChartOptions('p/cm³')
             });
             
             // Create density chart
@@ -1164,7 +1164,7 @@
                 data: {
                     labels: plasmaTimeLabels,
                     datasets: [{
-                        label: 'Gostota',
+                        label: 'Velocidad',
                         data: densityData,
                         borderColor: '#009688',
                         backgroundColor: 'rgba(0, 150, 136, 0.1)',
@@ -1174,7 +1174,7 @@
                         fill: true
                     }]
                 },
-                options: getChartOptions('p/cm³')
+                options: getChartOptions('km/s')
             });
             
             // Create temperature chart
